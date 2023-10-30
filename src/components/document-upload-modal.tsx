@@ -61,7 +61,13 @@ export const DocumentUploadModal = ({
   }, [document, documentName, setActiveDocument, setIsOpen]);
 
   return (
-    <Modal closeable isOpen={isOpen} animate autoFocus>
+    <Modal
+      closeable
+      onClose={() => setIsOpen(false)}
+      isOpen={isOpen}
+      animate
+      autoFocus
+    >
       <ModalHeader>Upload Document</ModalHeader>
       <ModalBody>
         <FlexColumn>
